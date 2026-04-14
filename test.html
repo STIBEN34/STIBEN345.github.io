@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oso de Rosas Por Mayor (x6) - tiada</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <p>ðŸŒ¹ tiada</p>
+        <div class="nav-links" id="navLinks">
+            <a href="#home">Inicio</a>
+            <a href="javascript:openProductsModal()" style="cursor: pointer;">Productos</a>
+            <a href="#contacto">Contacto</a>
+            <a href="javascript:openCartModal()" style="cursor: pointer;" class="desktop-cart">Carrito <span class="wishlist-count" id="cart-count">0</span></a>
+        </div>
+        <div class="cart-mobile" id="cartMobile">
+            <a href="javascript:openCartModal()" style="cursor: pointer; text-decoration: none;">ðŸ›’ <span class="wishlist-count-mobile" id="cart-count-mobile">0</span></a>
+        </div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Breadcrumb -->
+        <div class="breadcrumb">
+            <a href="#">Inicio</a> / <a href="#">Detalles</a> / <span>Oso de Rosas Por Mayor (x6)</span>
+        </div>
+
+        <!-- Product Section -->
+        <div class="product-section">
+            <div class="product-layout">
+                <!-- Gallery -->
+                <div class="product-gallery">
+                    <div class="main-image" id="mainImage">
+                        <img src="images/oso-rojo-1.jpg" alt="Oso Rojo 1">
+                    </div>
+                    <div class="thumbnail-gallery" id="thumbnailGallery">
+                        <div class="thumbnail active" data-index="0">
+                            <img src="images/oso-rojo-1.jpg" alt="Thumbnail 1" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="thumbnail" data-index="1">
+                            <img src="images/osos rojo 2.jpg" alt="Thumbnail 2" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="thumbnail" data-index="2">
+                            <img src="images/osos rojo 3.jpg" alt="Thumbnail 3" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                        <div class="thumbnail" data-index="3">
+                            <img src="images/oso morado 4.jpg" alt="Thumbnail 4" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <h1 class="product-title">Oso de Rosas Por Mayor (x6)</h1>
+                    
+                    <div>
+                        <span class="original-price">$ 660.000</span>
+                        <span class="product-price">$ 330.000</span>
+                    </div>
+
+                    <div class="free-shipping-info">
+                        âœ“ EnvÃ­o gratis por compras desde $80.000
+                    </div>
+
+                    <div class="product-description">
+                        <strong>Oso hecho a mano con rosas artificiales.</strong> Un regalo con mucho valor y que durarÃ¡ para siempre. Perfecto para dÃ­a de la madre, aniversarios, cumpleaÃ±os o fechas especiales.
+                    </div>
+
+                    <div class="product-features">
+                        <p>âœ¨ Cada uno en caja de lujo</p>
+                        <p>ðŸŽ Ideal para regalos especiales</p>
+                        <p>ðŸŒ¹ Rosas artificiales de alta calidad</p>
+                        <p>ðŸ“ž Puedes escolger los colores</p>
+                    </div>
+
+                    <div class="quantity-selector">
+                        <label for="quantity">Cantidad:</label>
+                        <div class="quantity-input">
+                            <button onclick="decreaseQty()">-</button>
+                            <input type="number" id="quantity" value="1" min="1">
+                            <button onclick="increaseQty()">+</button>
+                        </div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn btn-add-cart" onclick="addToCart()">
+                            ðŸ›’ AÃ‘ADIR AL CARRITO
+                        </button>
+                        <button class="btn btn-buy-now" onclick="buyNow()">
+                            âš¡ COMPRAR AHORA
+                        </button>
+                    </div>
+
+                    <div class="sharing-options">
+                        <a href="https://www.facebook.com/sharer.php" target="_blank" class="share-btn">
+                            f Facebook
+                        </a>
+                        <a href="https://twitter.com/intent/tweet" target="_blank" class="share-btn">
+                            ð• Twitter
+                        </a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/" target="_blank" class="share-btn">
+                            in LinkedIn
+                        </a>
+                    </div>
+
+                    <div class="contact-info">
+                        <p><strong>Â¿Preguntas? ContÃ¡ctanos</strong></p>
+                        <p>ðŸ“ž <a href="tel:+573012029168">+57 301 202 9168</a></p>
+                        <p>ðŸ“§ <a href="mailto:contacto@tiendavalu.com">contacto@tiendavalu.com</a></p>
+                        <p>Para escoger los colores, comunÃ­cate o te enviamos los colores surtidos.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Section as Modal -->
+        <div id="productsModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(26, 0, 51, 0.95); z-index: 999; overflow-y: auto;">
+            <div style="background: white; margin: 2rem auto; border-radius: 15px; padding: 2rem; box-shadow: 0 0 50px rgba(138, 43, 226, 0.4); max-width: 1200px;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h2 style="color: #1a0033; font-size: 1.8rem; margin: 0;">ðŸ›ï¸ NUESTROS PRODUCTOS</h2>
+                    <button onclick="closeProductsModal()" style="background: #ff1493; border: none; color: white; font-size: 1.5rem; cursor: pointer; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">Ã—</button>
+                </div>
+                
+                <div id="productsGrid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; padding: 1rem 0;">
+                    <!-- Los productos se generan con JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Carrito Modal -->
+        <div id="cartModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(26, 0, 51, 0.95); z-index: 999; overflow-y: auto;">
+            <div style="background: white; max-width: 600px; width: 90%; margin: 2rem auto; border-radius: 15px; padding: 2rem; box-shadow: 0 0 50px rgba(138, 43, 226, 0.4);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+                    <h2 style="color: #1a0033; font-size: 1.8rem; margin: 0;">ðŸ›’ Mi Carrito</h2>
+                    <button onclick="closeCartModal()" style="background: #ff1493; border: none; color: white; font-size: 1.5rem; cursor: pointer; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">Ã—</button>
+                </div>
+                
+                <div id="cartItemsList" style="margin-bottom: 1.5rem; max-height: 300px; overflow-y: auto;"></div>
+                
+                <div style="background: #f0e6ff; padding: 1rem; border-radius: 8px; margin-bottom: 1.5rem;">
+                    <p style="color: #1a0033; font-size: 1.2rem; margin: 0; font-weight: 700;">
+                        Total: $<span id="cartTotal">0</span>
+                    </p>
+                </div>
+                
+                <div style="display: flex; gap: 1rem;">
+                    <button onclick="closeCartModal()" style="flex: 1; padding: 0.8rem; background: #ccc; border: none; border-radius: 8px; cursor: pointer; font-weight: 700;">Seguir Comprando</button>
+                    <button onclick="sendCartToWhatsApp()" style="flex: 1; padding: 0.8rem; background: linear-gradient(135deg, #ff1493 0%, #4a0080 100%); border: none; color: white; border-radius: 8px; cursor: pointer; font-weight: 700; box-shadow: 0 0 15px rgba(255, 20, 147, 0.6);">ðŸ“± Enviar a WhatsApp</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Newsletter -->
+        <div style="text-align: center; margin: 3rem 0; padding: 2rem; background: linear-gradient(135deg, #f9f0ff 0%, #ffe0f5 100%); border-radius: 15px; border: 3px solid #ff1493; box-shadow: 0 0 30px rgba(138, 43, 226, 0.3), 0 0 60px rgba(255, 20, 147, 0.2);">
+            <h3 style="color: #1a0033; margin-bottom: 1rem; font-size: 1.8rem; font-weight: 800; text-shadow: 0 0 15px rgba(138, 43, 226, 0.4);">SuscrÃ­bete a Nuestro BoletÃ­n Para Recibir Ofertas</h3>
+            <div class="newsletter-input-container" style="display: flex; gap: 0.5rem; max-width: 400px; margin: 0 auto;">
+                <input type="email" placeholder="Tu correo electrÃ³nico" style="flex: 1; padding: 0.7rem; border: 3px solid #ff1493; border-radius: 8px; font-size: 1rem; box-shadow: 0 0 15px rgba(255, 20, 147, 0.3);">
+                <button style="background: linear-gradient(135deg, #ff1493 0%, #4a0080 100%); color: white; border: none; padding: 0.7rem 1.5rem; border-radius: 8px; cursor: pointer; font-weight: 700; box-shadow: 0 0 20px rgba(255, 20, 147, 0.6), 0 0 40px rgba(138, 43, 226, 0.3); text-shadow: 0 0 8px rgba(138, 43, 226, 0.4);">Suscribirse</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SOBRE NOSOTROS</h3>
+                <p>tiada ofrece accesorios exclusivos con envÃ­os a toda Colombia, priorizando calidad, cercanÃ­a y una excelente experiencia de compra.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>CONTACTO</h3>
+                <p>ðŸ“ Calle 19 # 3 - 11 La Vega, Cund.</p>
+                <p>ðŸ“ž <a href="tel:+573012029168">301 202 9168</a></p>
+                <p>ðŸ“§ <a href="mailto:osostiada@gmail.com">osostiada@gmail.com</a></p>
+                <p>â° Lun - Dom / 10:30AM - 7:30PM</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>SERVICIO AL CLIENTE</h3>
+                <ul>
+                    <li><a href="#">Preguntas Frecuentes</a></li>
+                    <li><a href="#">Seguimiento Pedido</a></li>
+                    <li><a href="#">EnvÃ­os y Reembolsos</a></li>
+                    <li><a href="#">Por Mayor</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">ContÃ¡ctanos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>MÃ‰TODOS DE PAGO</h3>
+                <div class="payment-methods">
+                    <span class="payment-badge">Wompi</span>
+                    <span class="payment-badge">Mercado Pago</span>
+                    <span class="payment-badge">PSE</span>
+                    <span class="payment-badge">CrÃ©dito</span>
+                </div>
+                <h3 style="margin-top: 1rem;">REDES SOCIALES</h3>
+                <ul>
+                    <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+                    <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    <li><a href="https://tiktok.com" target="_blank">TikTok</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Â© Jucob sas 2025. Derechos Reservados. tiada - Accesorsios exclusivos para ti.</p>
+        </div>
+    </footer>
+
+    <script src="services.js"></script>
+</body>
+</html>
+

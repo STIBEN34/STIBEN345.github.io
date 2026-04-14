@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacto - Osos Tiada">
+    <title>Contacto - Osos Tiada</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a0033 0%, #2d0052 100%);
+            margin: 0;
+            padding: 0;
+        }
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .contact-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .contact-header h1 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin: 0 0 1rem 0;
+            text-shadow: 0 0 15px rgba(138, 43, 226, 0.4);
+        }
+        .contact-header p {
+            color: #e0e0e0;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+        .contact-card {
+            background: rgba(74, 0, 128, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(138, 43, 226, 0.15);
+            margin-bottom: 2rem;
+            border: 1px solid rgba(255, 20, 147, 0.2);
+        }
+        .contact-item {
+            margin: 1.5rem 0;
+            padding: 1.5rem;
+            border-left: 4px solid #ff1493;
+            background: rgba(255, 20, 147, 0.1);
+            border-radius: 8px;
+        }
+        .contact-item strong {
+            display: block;
+            color: #ffffff;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        .contact-item a {
+            color: #ff1493;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 700;
+            word-break: break-word;
+        }
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+        .social-links {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        .social-links p {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            font-size: 3rem;
+            flex-wrap: wrap;
+        }
+        .social-icons a {
+            text-decoration: none;
+            color: #ff1493;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .social-icons a:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(0 0 10px rgba(255, 20, 147, 0.6));
+        }
+        .info-text {
+            color: #e0e0e0;
+            font-size: 0.95rem;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #ff1493;
+        }
+        .back-button {
+            display: inline-block;
+            text-decoration: none;
+            background: linear-gradient(135deg, #ff1493 0%, #4a0080 100%);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 20, 147, 0.4);
+        }
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(255, 20, 147, 0.6);
+        }
+        @media (max-width: 768px) {
+            .contact-container {
+                padding: 2rem 1rem;
+            }
+            .contact-header h1 {
+                font-size: 2rem;
+            }
+            .contact-card {
+                padding: 1rem;
+            }
+            .social-icons {
+                gap: 1.5rem;
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar" style="background: linear-gradient(90deg, #4a0080 0%, #1a0033 100%); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 20px rgba(138, 43, 226, 0.6), 0 0 40px rgba(138, 43, 226, 0.3); border-bottom: 2px solid rgba(255, 20, 147, 0.3);">
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <img src="images/logo osos tiada.png" alt="Logo Osos Tiada" style="height: 40px; width: auto;">
+            <span style="color: white; font-weight: 700; font-size: 1.2rem;">Osos Tiada</span>
+        </div>
+        <div style="display: flex; gap: 1.5rem;">
+            <a href="index.html" style="color: white; text-decoration: none; font-weight: 700; transition: all 0.3s ease;" onmouseover="this.style.opacity='0.8'" onmouseout="this.style.opacity='1'">← Volver</a>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>¿Preguntas? Contáctanos</h1>
+            <p>Estamos aquí para ayudarte en todo</p>
+        </div>
+
+        <div class="contact-card">
+            <div class="contact-item">
+                <strong>📞 Teléfono</strong>
+                <a href="tel:+573168022611">+57 316 8022611</a>
+            </div>
+
+            <div class="contact-item">
+                <strong>📧 Correo Electrónico</strong>
+                <a href="mailto:osostiada@gmail.com">osostiada@gmail.com</a>
+            </div>
+
+            <div class="contact-item">
+                <strong>⏰ Horario de Atención</strong>
+                <p style="margin: 0; color: #666;">Lun - Dom / 10:30AM - 7:30PM</p>
+            </div>
+
+            <div class="social-links">
+                <p>📱 Síguenos en Redes Sociales</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank" title="Facebook">📘</a>
+                    <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+                    <a href="https://tiktok.com" target="_blank" title="TikTok">🎵</a>
+                </div>
+            </div>
+
+            <div class="info-text">
+                <p>Para escoger los colores, comunícate con nosotros o te enviamos los colores surtidos.</p>
+                <p style="font-size: 0.9rem; color: #999; margin-top: 1rem;">Responderemos a tu mensaje lo antes posible. ¡Gracias por contactar a Osos Tiada!</p>
+            </div>
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="back-button">← Volver a Inicio</a>
+        </div>
+    </div>
+
+    <script src="services.js"></script>
+</body>
+</html>
